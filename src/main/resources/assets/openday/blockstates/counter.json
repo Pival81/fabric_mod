@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "number=0": { "model": "openday:block/counter_0"},
+    "number=1": { "model": "openday:block/counter_1"},
+    "number=2": { "model": "openday:block/counter_2"},
+    "number=3": { "model": "openday:block/counter_3"},
+    "number=4": { "model": "openday:block/counter_4"},
+    "number=5": { "model": "openday:block/counter_5"},
+    "number=6": { "model": "openday:block/counter_6"},
+    "number=7": { "model": "openday:block/counter_7"},
+    "number=8": { "model": "openday:block/counter_8"},
+    "number=9": { "model": "openday:block/counter_9"}
+  }
+}
+
