@@ -9,7 +9,11 @@
           "name": "openday:counter"
         }
       ],
-      "conditions": []
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
     }
   ]
 }

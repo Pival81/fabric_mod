@@ -1,4 +1,6 @@
 {
   "block.openday.counter"="Contatore",
-  "block.openday.lasagna"="Lasagna"
+  "block.openday.lasagna"="Lasagna",
+  "block.openday.hunger"="Ma! Tegnu fami.",
+  "item.openday.cosainsegna"="Cosa insegna veramente la Bibbia?"
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "openday",
   "version": "${version}",
 
   "name": "Openday",
@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.Openday"
+      "net.pival81.openday.Openday"
     ]
   },
   "mixins": [

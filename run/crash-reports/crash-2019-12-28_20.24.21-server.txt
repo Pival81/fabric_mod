@@ -1,0 +1,119 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 28/12/19 20.24
+Description: Exception while ticking
+
+java.lang.IllegalArgumentException: Cannot get property BooleanProperty{name=waterlogged, clazz=class java.lang.Boolean, values=[true, false]} as it does not exist in Block{openday:lasagna}
+	at net.minecraft.state.AbstractState.get(AbstractState.java:93)
+	at net.minecraft.block.Waterloggable.canFillWithFluid(Waterloggable.java:15)
+	at net.minecraft.fluid.BaseFluid.method_15754(BaseFluid.java:410)
+	at net.minecraft.fluid.BaseFluid.method_15746(BaseFluid.java:331)
+	at net.minecraft.fluid.BaseFluid.method_15726(BaseFluid.java:376)
+	at net.minecraft.fluid.BaseFluid.method_15744(BaseFluid.java:154)
+	at net.minecraft.fluid.BaseFluid.method_15725(BaseFluid.java:141)
+	at net.minecraft.fluid.BaseFluid.onScheduledTick(BaseFluid.java:459)
+	at net.minecraft.fluid.FluidState.onScheduledTick(FluidState.java:69)
+	at net.minecraft.server.world.ServerWorld.tickFluid(ServerWorld.java:577)
+	at net.minecraft.server.world.ServerTickScheduler.tick(ServerTickScheduler.java:87)
+	at net.minecraft.server.world.ServerWorld.tick(ServerWorld.java:329)
+	at net.minecraft.server.MinecraftServer.tickWorlds(MinecraftServer.java:847)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:786)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:128)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:654)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.state.AbstractState.get(AbstractState.java:93)
+	at net.minecraft.block.Waterloggable.canFillWithFluid(Waterloggable.java:15)
+	at net.minecraft.fluid.BaseFluid.method_15754(BaseFluid.java:410)
+	at net.minecraft.fluid.BaseFluid.method_15746(BaseFluid.java:331)
+	at net.minecraft.fluid.BaseFluid.method_15726(BaseFluid.java:376)
+	at net.minecraft.fluid.BaseFluid.method_15744(BaseFluid.java:154)
+	at net.minecraft.fluid.BaseFluid.method_15725(BaseFluid.java:141)
+	at net.minecraft.fluid.BaseFluid.onScheduledTick(BaseFluid.java:459)
+	at net.minecraft.fluid.FluidState.onScheduledTick(FluidState.java:69)
+	at net.minecraft.server.world.ServerWorld.tickFluid(ServerWorld.java:577)
+
+-- Block being ticked --
+Details:
+	Block location: World: (47,3,-180), Chunk: (at 15,0,12 in 2,-12; contains blocks 32,0,-192 to 47,255,-177), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+Stacktrace:
+	at net.minecraft.server.world.ServerTickScheduler.tick(ServerTickScheduler.java:87)
+	at net.minecraft.server.world.ServerWorld.tick(ServerWorld.java:329)
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayerEntity['Player518'/171, l='New World', x=45.46, y=4.00, z=-179.63]]
+	Chunk stats: ServerChunkCache: 2794
+	Level dimension: minecraft:overworld
+	Level name: New World
+	Level seed: 7640090967280306057
+	Level generator: ID 01 - flat, ver 0. Features enabled: true
+	Level generator options: {}
+	Level spawn location: World: (-192,4,-192), Chunk: (at 0,0,0 in -12,-12; contains blocks -192,0,-192 to -177,255,-177), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Level time: 53190 game time, 33589 day time
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 94039 (now: false), thunder time: 160299 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.tickWorlds(MinecraftServer.java:847)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:786)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:128)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:654)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.15.1
+	Minecraft Version ID: 1.15.1
+	Operating System: Linux (amd64) version 4.19.88-1-MANJARO
+	Java Version: 1.8.0_212, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1027567800 bytes (979 MB) / 1677721600 bytes (1600 MB) up to 3726639104 bytes (3554 MB)
+	CPUs: 4
+	JVM Flags: 0 total; 
+	Fabric Mods: 
+		fabric: Fabric API 0.4.25+build.282-1.15
+		fabric-api-base: Fabric API Base 0.1.2+b7f9825d95
+		fabric-biomes-v1: Fabric Biomes (v1) 0.1.5+3b05f68e95
+		fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 1.1.4+c6a8ea8995
+		fabric-commands-v0: Fabric Commands (v0) 0.1.2+b7f9825d95
+		fabric-containers-v0: Fabric Containers (v0) 0.1.3+b7f9825d95
+		fabric-content-registries-v0: Fabric Content Registries (v0) 0.1.3+b7f9825d95
+		fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.1.2+b7f9825d95
+		fabric-dimensions-v1: fabric-dimensions-v1 0.2.3+06c939b395
+		fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.2.6+12515ed995
+		fabric-events-lifecycle-v0: Fabric Events Lifecycle (v0) 0.1.2+b7f9825d95
+		fabric-item-groups-v0: Fabric Item Groups (v0) 0.1.6+ec40b2e195
+		fabric-keybindings-v0: Fabric Key Bindings (v0) 0.1.1+dfdb52d695
+		fabric-loot-tables-v1: Fabric Loot Tables (v1) 0.1.5+e08a730595
+		fabric-mining-levels-v0: Fabric Mining Levels (v0) 0.1.1+b7f9825d95
+		fabric-models-v0: Fabric Models (v0) 0.1.0+dfdb52d695
+		fabric-networking-blockentity-v0: Fabric Networking Block Entity (v0) 0.2.3+e08a730595
+		fabric-networking-v0: Fabric Networking (v0) 0.1.7+12515ed995
+		fabric-object-builders-v0: Fabric Object Builders (v0) 0.1.3+e4c9a9c395
+		fabric-particles-v1: fabric-particles-v1 0.1.1+dfdb52d695
+		fabric-registry-sync-v0: Fabric Registry Sync (v0) 0.2.6+f3d8141b95
+		fabric-renderer-api-v1: Fabric Renderer API (v1) 0.2.7+f3d8141b95
+		fabric-renderer-indigo: Fabric Renderer - Indigo 0.2.20+d830abd695
+		fabric-renderer-registries-v1: Fabric Renderer Registries (v1) 2.0.1+5a0f9a6095
+		fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.1.3+b7f9825d95
+		fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 0.1.6+12515ed995
+		fabric-rendering-v0: Fabric Rendering (v0) 1.0.1+b7f9825d95
+		fabric-resource-loader-v0: Fabric Resource Loader (v0) 0.1.10+06c939b395
+		fabric-tag-extensions-v0: Fabric Tag Extensions (v0) 0.1.3+abd9158095
+		fabric-textures-v0: Fabric Textures (v0) 1.0.4+821cdba795
+		fabricloader: Fabric Loader 0.7.2+build.175
+		minecraft: Minecraft 1.15.1
+		openday: Openday 1.0.0
+	Player Count: 1 / 8; [ServerPlayerEntity['Player518'/171, l='New World', x=45.46, y=4.00, z=-179.63]]
+	Data Packs: vanilla, fabric/fabric-mining-levels-v0 (incompatible), fabric/openday (incompatible)
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fabric'

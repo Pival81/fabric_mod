@@ -1,22 +1,31 @@
 {
-    "textures": {
-        "particle": "openday:block/lasagna_side",
-        "bottom": "openday:block/lasagna_bottom",
-        "top": "openday:block/lasagna_top",
-        "side": "openday:block/lasagna_side",
-        "inside": "openday:block/lasagna_inner"
-    },
-    "elements": [
-        {   "from": [ 3, 0, 1 ],
-            "to": [ 15, 8, 15 ],
-            "faces": {
-                "down":  { "texture": "#bottom", "cullface": "down" },
-                "up":    { "texture": "#top" },
-                "north": { "texture": "#side" },
-                "south": { "texture": "#side" },
-                "west":  { "texture": "#inside" },
-                "east":  { "texture": "#side" }
-            }
-        }
-    ]
+	"credit": "Made with Blockbench",
+	"textures": {
+		"3": "openday:block/lasagna_inner",
+		"bottom": "openday:block/lasagna_bottom",
+		"top": "openday:block/lasagna_top",
+		"particle": "openday:block/lasagna_side",
+		"side": "openday:block/lasagna_side"
+	},
+	"elements": [
+		{
+			"from": [1, 0, 8],
+			"to": [8, 8, 15],
+			"faces": {
+				"north": {"uv": [8, 8, 15, 16], "texture": "#3"},
+				"east": {"uv": [15, 8, 8, 16], "texture": "#3"},
+				"south": {"uv": [1, 8, 8, 16], "texture": "#side"},
+				"west": {"uv": [8, 8, 15, 16], "texture": "#side"},
+				"up": {"uv": [1, 8, 8, 15], "texture": "#top"},
+				"down": {"uv": [1, 8, 8, 15], "texture": "#bottom", "cullface": "down"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "group",
+			"origin": [8, 8, 8],
+			"children": [0]
+		}
+	]
 }

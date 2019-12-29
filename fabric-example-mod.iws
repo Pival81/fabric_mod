@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ee1dc1-268a-4a2a-90cd-797dfddb7fe5" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,6 +93,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="fabric-example-mod.main/invalid/Minecraft" />
+      <facet id="fabric-example-mod.test/invalid/Minecraft" />
+    </ignored-facets>
+  </component>
   <component name="ModuleEditorState">
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
@@ -107,6 +112,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToClass.includeLibraries" value="false" />
@@ -122,32 +132,21 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/assets/openday/models/block" />
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/openday/blockstates" />
       <recent name="$PROJECT_DIR$/src/main/resources/assets/openday/models/item" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Gradle.fabric-example-mod [runClient]">
-    <configuration default="true" name="&lt;template&gt;" selected="false" type="WebApp">
-      <Host>localhost</Host>
-      <Port>5050</Port>
-    </configuration>
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" name="&lt;template&gt;" selected="false" type="WebApp">
+      <Host>localhost</Host>
+      <Port>5050</Port>
     </configuration>
     <configuration name="Minecraft Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="net.fabricmc.devlaunchinjector.Main" />
@@ -173,6 +172,25 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="fabric-example-mod [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="fabric-example-mod [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -219,8 +237,21 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.fabric-example-mod [runClient]" />
+        <item itemvalue="Gradle.fabric-example-mod [build]" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -255,13 +286,55 @@
     </ignored-roots>
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="693" y="280" width="524" height="482" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1577578459528">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="693" y="280" width="524" height="482" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577578459528" />
+    <state width="1878" height="195" key="GridCell.Tab.0.bottom" timestamp="1577580330816">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577580330816" />
+    <state width="1878" height="195" key="GridCell.Tab.0.center" timestamp="1577580330816">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="195" key="GridCell.Tab.0.center/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577580330816" />
+    <state width="1878" height="195" key="GridCell.Tab.0.left" timestamp="1577580330816">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="195" key="GridCell.Tab.0.left/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577580330816" />
+    <state width="1878" height="195" key="GridCell.Tab.0.right" timestamp="1577580330816">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="195" key="GridCell.Tab.0.right/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577580330816" />
+    <state width="1878" height="332" key="GridCell.Tab.1.bottom" timestamp="1577580162169">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="332" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577580162169" />
+    <state width="1878" height="332" key="GridCell.Tab.1.center" timestamp="1577580162169">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="332" key="GridCell.Tab.1.center/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577580162169" />
+    <state width="1878" height="332" key="GridCell.Tab.1.left" timestamp="1577580162169">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="332" key="GridCell.Tab.1.left/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577580162169" />
+    <state width="1878" height="332" key="GridCell.Tab.1.right" timestamp="1577580162169">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="332" key="GridCell.Tab.1.right/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577580162169" />
+    <state x="624" y="238" key="run.anything.popup" timestamp="1577575644616">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="624" y="238" key="run.anything.popup/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577575644616" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/net/fabricmc/example/Openday.java</url>
-          <line>26</line>
-          <properties class="net.fabricmc.example.Openday" method="onInitialize">
+          <url>file://$PROJECT_DIR$/src/main/java/net/pival81/openday/Openday.java</url>
+          <line>43</line>
+          <properties class="net.pival81.openday.Openday" method="onInitialize">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="1" />
