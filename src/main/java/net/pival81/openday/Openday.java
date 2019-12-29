@@ -55,7 +55,7 @@ public class Openday implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("openday", "hunger"),
 				new BlockItem(HUNGERBLOCK, new Item.Settings().group(ItemGroup.FOOD)));
 
-		Registry.register(Registry.ITEM, new Identifier("openday", "cosainsegna"), COSAINSEGNA);
+		//Registry.register(Registry.ITEM, new Identifier("openday", "cosainsegna"), COSAINSEGNA);
 
 		Registry.register(Registry.BLOCK, new Identifier("openday", "minesweeper_controller"), MINESWEEPERCONTROLLER);
 		Registry.register(Registry.ITEM, new Identifier("openday", "minesweeper_controller"),
