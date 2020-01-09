@@ -1,58 +1,112 @@
 {
   "variants": {
-    "number=0,hidden=false": {
+    "number=0,property=0": {
       "model": "openday:block/tile"
     },
-    "number=1,hidden=false": {
+    "number=1,property=0": {
       "model": "openday:block/counter_1"
     },
-    "number=2,hidden=false": {
+    "number=2,property=0": {
       "model": "openday:block/counter_2"
     },
-    "number=3,hidden=false": {
+    "number=3,property=0": {
       "model": "openday:block/counter_3"
     },
-    "number=4,hidden=false": {
+    "number=4,property=0": {
       "model": "openday:block/counter_4"
     },
-    "number=5,hidden=false": {
+    "number=5,property=0": {
       "model": "openday:block/counter_5"
     },
-    "number=6,hidden=false": {
+    "number=6,property=0": {
       "model": "openday:block/counter_6"
     },
-    "number=7,hidden=false": {
+    "number=7,property=0": {
       "model": "openday:block/counter_7"
     },
-    "number=8,hidden=false": {
+    "number=8,property=0": {
       "model": "openday:block/counter_8"
     },
-    "number=0,hidden=true": {
+    "number=0,property=1": {
       "model": "openday:block/hidden"
     },
-    "number=1,hidden=true": {
+    "number=1,property=1": {
       "model": "openday:block/hidden"
     },
-    "number=2,hidden=true": {
+    "number=2,property=1": {
       "model": "openday:block/hidden"
     },
-    "number=3,hidden=true": {
+    "number=3,property=1": {
       "model": "openday:block/hidden"
     },
-    "number=4,hidden=true": {
+    "number=4,property=1": {
       "model": "openday:block/hidden"
     },
-    "number=5,hidden=true": {
+    "number=5,property=1": {
       "model": "openday:block/hidden"
     },
-    "number=6,hidden=true": {
+    "number=6,property=1": {
       "model": "openday:block/hidden"
     },
-    "number=7,hidden=true": {
+    "number=7,property=1": {
       "model": "openday:block/hidden"
     },
-    "number=8,hidden=true": {
+    "number=8,property=1": {
       "model": "openday:block/hidden"
+    },
+    "number=0,property=2": {
+      "model": "openday:block/flag"
+    },
+    "number=1,property=2": {
+      "model": "openday:block/flag"
+    },
+    "number=2,property=2": {
+      "model": "openday:block/flag"
+    },
+    "number=3,property=2": {
+      "model": "openday:block/flag"
+    },
+    "number=4,property=2": {
+      "model": "openday:block/flag"
+    },
+    "number=5,property=2": {
+      "model": "openday:block/flag"
+    },
+    "number=6,property=2": {
+      "model": "openday:block/flag"
+    },
+    "number=7,property=2": {
+      "model": "openday:block/flag"
+    },
+    "number=8,property=2": {
+      "model": "openday:block/flag"
+    },
+    "number=0,property=3": {
+      "model": "openday:block/tile"
+    },
+    "number=1,property=3": {
+      "model": "openday:block/counter_1"
+    },
+    "number=2,property=3": {
+      "model": "openday:block/counter_2"
+    },
+    "number=3,property=3": {
+      "model": "openday:block/counter_3"
+    },
+    "number=4,property=3": {
+      "model": "openday:block/counter_4"
+    },
+    "number=5,property=3": {
+      "model": "openday:block/counter_5"
+    },
+    "number=6,property=3": {
+      "model": "openday:block/counter_6"
+    },
+    "number=7,property=3": {
+      "model": "openday:block/counter_7"
+    },
+    "number=8,property=3": {
+      "model": "openday:block/counter_8"
     }
   }
 }

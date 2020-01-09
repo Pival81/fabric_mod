@@ -7,6 +7,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.pival81.openday.Openday;
 
+import static net.pival81.openday.Openday.MINESWEEPERBOMB;
+
 public class MinesweeperController extends Block {
 
     public static final int x = 14;
@@ -21,9 +23,9 @@ public class MinesweeperController extends Block {
         if(world.isReceivingRedstonePower(pos)) {
             for (int i = 1; i < x+1; i++) {
                 for (int j = 0; j <y+1; j++) {
-                    world.setBlockState(new BlockPos(pos.getX() + i, pos.getY() + j, pos.getZ()),
-                        Math.random()<0.2 ?
-                           Openday.MINESWEEPERBOMB.getDefaultState().with(MinesweeperBomb.SOURCEX, pos.getX()).with(MinesweeperBomb.SOURCEY, pos.getY()).with(MinesweeperBomb.SOURCEZ, pos.getZ())
+                    BlockPos newpos =  new BlockPos(pos.getX() + i, pos.getY() + j, pos.getZ());
+                    world.setBlockState(newpos,
+                        Math.random()<0.2 ? (MINESWEEPERBOMB.getDefaultState())
                            : Openday.MINESWEEPERTILE.getDefaultState());
                 }
             }

@@ -8,6 +8,9 @@
     },
     "property=2": {
       "model": "openday:block/flag"
+    },
+    "property=3": {
+      "model": "openday:block/bomb"
     }
   }
 }

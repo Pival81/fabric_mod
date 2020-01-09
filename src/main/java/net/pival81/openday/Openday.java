@@ -32,7 +32,7 @@ public class Openday implements ModInitializer {
 			return ActionResult.SUCCESS;
 		}
 	};
-	public static final Item COSAINSEGNA = new Item(new Item.Settings().group(ItemGroup.MISC));
+	//public static final Item COSAINSEGNA = new Item(new Item.Settings().group(ItemGroup.MISC));
 	public static BlockEntityType<CounterBlockEntity> COUNTER_BLOCK_ENTITY;
 	public static final Block MINESWEEPERCONTROLLER = new MinesweeperController();
 	public static final Block MINESWEEPERTILE = new MinesweeperTile();
