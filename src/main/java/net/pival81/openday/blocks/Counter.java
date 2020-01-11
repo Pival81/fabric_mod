@@ -1,5 +1,7 @@
 package net.pival81.openday.blocks;
 
+import net.minecraft.block.BlockEntityProvider;
+import net.minecraft.block.entity.BlockEntity;
 import net.pival81.openday.Openday;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -14,8 +16,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.pival81.openday.blockentities.CounterBlockEntity;
 
-public class Counter extends Block {
+public class Counter extends Block implements BlockEntityProvider {
 
     public static final IntProperty NUMBER = IntProperty.of("number", 0, 9);
 
@@ -30,6 +33,11 @@ public class Counter extends Block {
 
     public int getWeakRedstonePower(BlockState state, BlockView view, BlockPos pos, Direction facing) {
         return state.get(NUMBER);
+    }
+
+    @Override
+    public BlockEntity createBlockEntity(BlockView blockView){
+        return new CounterBlockEntity();
     }
 
     @Override

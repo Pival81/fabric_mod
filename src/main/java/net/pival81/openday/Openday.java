@@ -1,12 +1,13 @@
 package net.pival81.openday;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityType;
 import net.pival81.openday.blockentities.CounterBlockEntity;
 import net.pival81.openday.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
@@ -33,10 +34,11 @@ public class Openday implements ModInitializer {
 		}
 	};
 	//public static final Item COSAINSEGNA = new Item(new Item.Settings().group(ItemGroup.MISC));
-	public static BlockEntityType<CounterBlockEntity> COUNTER_BLOCK_ENTITY;
 	public static final Block MINESWEEPERCONTROLLER = new MinesweeperController();
 	public static final Block MINESWEEPERTILE = new MinesweeperTile();
 	public static final Block MINESWEEPERBOMB = new MinesweeperBomb();
+
+	public static BlockEntityType<CounterBlockEntity> COUNTERBLOCKENTITY;
 
 
 
@@ -68,6 +70,9 @@ public class Openday implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier("openday", "minesweeper_bomb"), MINESWEEPERBOMB);
 		Registry.register(Registry.ITEM, new Identifier("openday", "minesweeper_bomb"),
 				new BlockItem(MINESWEEPERBOMB, new Item.Settings().group(ItemGroup.REDSTONE)));
+
+		COUNTERBLOCKENTITY = Registry.register(Registry.BLOCK_ENTITY, new Identifier("openday", "counter"),
+				BlockEntityType.Builder.create(CounterBlockEntity::new, COUNTER).build(null));
 	}
 
 }

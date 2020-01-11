@@ -297,33 +297,37 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="693" y="280" width="524" height="482" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577578459528" />
-    <state x="768" y="241" width="731" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1577633065635">
+    <state x="768" y="241" width="731" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1578779029141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="768" y="241" width="731" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577633065635" />
+    <state x="768" y="241" width="731" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1578779029141" />
     <state x="744" y="410" width="431" height="231" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1577581735925">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="744" y="410" width="431" height="231" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577581735925" />
-    <state width="1880" height="195" key="GridCell.Tab.0.bottom" timestamp="1577642608026">
+    <state x="693" y="272" width="524" height="498" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578778491261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1880" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577642608026" />
+    <state x="693" y="272" width="524" height="498" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1578778491261" />
+    <state width="1878" height="375" key="GridCell.Tab.0.bottom" timestamp="1578784164936">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1578784164936" />
     <state width="1880" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1577612557508" />
-    <state width="1880" height="195" key="GridCell.Tab.0.center" timestamp="1577642608026">
+    <state width="1878" height="375" key="GridCell.Tab.0.center" timestamp="1578784164936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1880" height="195" key="GridCell.Tab.0.center/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577642608026" />
+    <state width="1878" height="375" key="GridCell.Tab.0.center/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1578784164936" />
     <state width="1880" height="195" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1577612557507" />
-    <state width="1880" height="195" key="GridCell.Tab.0.left" timestamp="1577642608026">
+    <state width="1878" height="375" key="GridCell.Tab.0.left" timestamp="1578784164936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1880" height="195" key="GridCell.Tab.0.left/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577642608026" />
+    <state width="1878" height="375" key="GridCell.Tab.0.left/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1578784164936" />
     <state width="1880" height="195" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1577612557507" />
-    <state width="1880" height="195" key="GridCell.Tab.0.right" timestamp="1577642608026">
+    <state width="1878" height="375" key="GridCell.Tab.0.right" timestamp="1578784164936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1880" height="195" key="GridCell.Tab.0.right/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577642608026" />
+    <state width="1878" height="375" key="GridCell.Tab.0.right/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1578784164936" />
     <state width="1880" height="195" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1577612557507" />
     <state width="1878" height="332" key="GridCell.Tab.1.bottom" timestamp="1577581949377">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -341,6 +345,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="332" key="GridCell.Tab.1.right/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577581949377" />
+    <state x="392" y="145" width="1125" height="751" key="new project wizard" timestamp="1578780485867">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="392" y="145" width="1125" height="751" key="new project wizard/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1578780485867" />
     <state x="624" y="238" key="run.anything.popup" timestamp="1577575644616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -351,7 +359,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/net/pival81/openday/Openday.java</url>
-          <line>43</line>
+          <line>45</line>
           <properties class="net.pival81.openday.Openday" method="onInitialize">
             <option name="EMULATED" value="true" />
           </properties>
