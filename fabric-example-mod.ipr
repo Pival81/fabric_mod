@@ -99,6 +99,17 @@
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="libraryTable">
+    <library name="Gradle: com.fazecast:jSerialComm:2.5.3">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.fazecast/jSerialComm/2.5.3/fd5f32c3f4f362619563866d2b2c37a913db618d/jSerialComm-2.5.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.fazecast/jSerialComm/2.5.3/f986f132366cc91ae58292e85aa4bd34e61af282/jSerialComm-2.5.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.fazecast/jSerialComm/2.5.3/f7755eb71ae91f26fdaae18fced583292f1f1056/jSerialComm-2.5.3-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: com.google.code.gson:gson:2.8.0">
       <CLASSES>
         <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar!/" />

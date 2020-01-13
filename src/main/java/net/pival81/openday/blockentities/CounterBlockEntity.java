@@ -11,7 +11,9 @@ import net.pival81.openday.blocks.Counter;
 
 public class CounterBlockEntity extends BlockEntity implements Tickable {
 
-    private int tickCount = 0;
+    //private int tickCount = 0;
+
+    public static int number = 0;
 
     public CounterBlockEntity() {
         super(Openday.COUNTERBLOCKENTITY);
@@ -27,6 +29,17 @@ public class CounterBlockEntity extends BlockEntity implements Tickable {
     }
 
     @Override
+    public void tick(){
+        World world = this.getWorld();
+        if(!world.isClient){
+            BlockPos pos = this.getPos();
+            BlockState bs = world.getBlockState(pos);
+
+            world.setBlockState(pos, bs.with(Counter.NUMBER, number), 2);
+        }
+    }
+
+    /*@Override
     public void tick() {
         World world = this.getWorld();
         if(!(world.isClient)){
@@ -43,5 +56,5 @@ public class CounterBlockEntity extends BlockEntity implements Tickable {
                 world.setBlockState(pos, bs.with(Counter.NUMBER, ( currentNumber < 9) ? currentNumber+1 : 0));
             }
         }
-    }
+    }*/
 }

@@ -1,7 +1,9 @@
 package net.pival81.openday;
 
+import com.fazecast.jSerialComm.SerialPort;
+import com.fazecast.jSerialComm.SerialPortDataListener;
+import com.fazecast.jSerialComm.SerialPortEvent;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.pival81.openday.blockentities.CounterBlockEntity;
 import net.pival81.openday.blocks.*;
@@ -20,6 +22,11 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Arrays;
+
 
 public class Openday implements ModInitializer {
 
@@ -73,6 +80,38 @@ public class Openday implements ModInitializer {
 
 		COUNTERBLOCKENTITY = Registry.register(Registry.BLOCK_ENTITY, new Identifier("openday", "counter"),
 				BlockEntityType.Builder.create(CounterBlockEntity::new, COUNTER).build(null));
+
+
+		SerialPort ports[] = SerialPort.getCommPorts();
+		System.out.println(Arrays.toString(ports));
+		SerialPort port = ports[1];
+		port.setComPortParameters(9600, 8, 1, 0);
+		port.setComPortTimeouts(SerialPort.TIMEOUT_NONBLOCKING,0,0);
+
+		if (port.openPort()) {
+			System.out.println("Port is open :)");
+		} else {
+			System.out.println("Failed to open port :(");
+			return;
+		}
+		InputStream in = port.getInputStream();
+		port.addDataListener(new SerialPortDataListener() {
+			@Override
+			public int getListeningEvents() {
+				return SerialPort.LISTENING_EVENT_DATA_AVAILABLE;
+			}
+			public void serialEvent(SerialPortEvent event) {
+				if (event.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE)
+					return;
+				char numRead = 0;
+				try {
+					numRead = (char) in.read();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				CounterBlockEntity.number = Character.getNumericValue(numRead);
+			}
+		});
 	}
 
 }

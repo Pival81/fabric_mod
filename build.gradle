@@ -20,6 +20,8 @@ dependencies {
 
 	//Fabric api
 	modCompile "net.fabricmc.fabric-api:fabric-api:0.4.26+build.283-1.15"
+
+	implementation 'com.fazecast:jSerialComm:[2.0.0,3.0.0)'
 }
 
 processResources {
