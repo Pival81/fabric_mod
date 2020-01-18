@@ -131,17 +131,25 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/assets/openday/models/block" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/assets/openday/blockstates" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/assets/openday/models/block" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.pival81.openday.serialhandlers" />
+      <recent name="net.pival81.openday.blockentities" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/assets/openday/blockstates" />
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/openday/models/block" />
       <recent name="$PROJECT_DIR$/src/main/resources/assets/openday/models/item" />
     </key>
   </component>
@@ -316,42 +324,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="693" y="272" width="524" height="498" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1578778491261" />
-    <state width="1878" height="375" key="GridCell.Tab.0.bottom" timestamp="1578852006317">
+    <state x="718" y="386" width="473" height="269" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1579206588528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1578852006317" />
-    <state width="1880" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1577612557508" />
-    <state width="1878" height="375" key="GridCell.Tab.0.center" timestamp="1578852006317">
+    <state x="718" y="386" width="473" height="269" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1579206588528" />
+    <state width="1878" height="265" key="GridCell.Tab.0.bottom" timestamp="1579306324243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="375" key="GridCell.Tab.0.center/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1578852006317" />
-    <state width="1880" height="195" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1577612557507" />
-    <state width="1878" height="375" key="GridCell.Tab.0.left" timestamp="1578852006317">
+    <state width="1878" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1579306324243" />
+    <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1579101061023" />
+    <state width="1878" height="265" key="GridCell.Tab.0.center" timestamp="1579306324243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="375" key="GridCell.Tab.0.left/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1578852006317" />
-    <state width="1880" height="195" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1577612557507" />
-    <state width="1878" height="375" key="GridCell.Tab.0.right" timestamp="1578852006317">
+    <state width="1878" height="265" key="GridCell.Tab.0.center/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1579306324243" />
+    <state width="1878" height="375" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1579101061022" />
+    <state width="1878" height="265" key="GridCell.Tab.0.left" timestamp="1579306324243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="375" key="GridCell.Tab.0.right/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1578852006317" />
-    <state width="1880" height="195" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1577612557507" />
-    <state width="1878" height="332" key="GridCell.Tab.1.bottom" timestamp="1577581949377">
+    <state width="1878" height="265" key="GridCell.Tab.0.left/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1579306324243" />
+    <state width="1878" height="375" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1579101061021" />
+    <state width="1878" height="265" key="GridCell.Tab.0.right" timestamp="1579306324243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="332" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577581949377" />
-    <state width="1878" height="332" key="GridCell.Tab.1.center" timestamp="1577581949377">
+    <state width="1878" height="265" key="GridCell.Tab.0.right/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1579306324243" />
+    <state width="1878" height="375" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1579101061023" />
+    <state width="1878" height="332" key="GridCell.Tab.1.bottom" timestamp="1579217442501">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="332" key="GridCell.Tab.1.center/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577581949377" />
-    <state width="1878" height="332" key="GridCell.Tab.1.left" timestamp="1577581949377">
+    <state width="1878" height="332" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1579217442501" />
+    <state width="1878" height="332" key="GridCell.Tab.1.center" timestamp="1579217442501">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="332" key="GridCell.Tab.1.left/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577581949376" />
-    <state width="1878" height="332" key="GridCell.Tab.1.right" timestamp="1577581949377">
+    <state width="1878" height="332" key="GridCell.Tab.1.center/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1579217442501" />
+    <state width="1878" height="332" key="GridCell.Tab.1.left" timestamp="1579217442501">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="332" key="GridCell.Tab.1.right/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1577581949377" />
+    <state width="1878" height="332" key="GridCell.Tab.1.left/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1579217442501" />
+    <state width="1878" height="332" key="GridCell.Tab.1.right" timestamp="1579217442501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="332" key="GridCell.Tab.1.right/0.0.1920.1040/1920.312.1366.768@0.0.1920.1040" timestamp="1579217442501" />
     <state x="392" y="145" width="1125" height="751" key="new project wizard" timestamp="1578780485867">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -366,7 +378,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/net/pival81/openday/Openday.java</url>
-          <line>52</line>
+          <line>56</line>
           <properties class="net.pival81.openday.Openday" method="onInitialize">
             <option name="EMULATED" value="true" />
           </properties>

@@ -6,6 +6,7 @@ import com.fazecast.jSerialComm.SerialPortEvent;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.block.entity.BlockEntityType;
 import net.pival81.openday.blockentities.CounterBlockEntity;
+import net.pival81.openday.blockentities.RobotBlockEntity;
 import net.pival81.openday.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -31,6 +32,7 @@ import java.util.Arrays;
 public class Openday implements ModInitializer {
 
 	public static final Block COUNTER = new Counter();
+	public static final Block ROBOT = new Robot();
 	public static final Block LASAGNA = new Lasagna();
 	public static final Block HUNGERBLOCK = new Block(Block.Settings.of(Material.ANVIL)){
 
@@ -46,8 +48,10 @@ public class Openday implements ModInitializer {
 	public static final Block MINESWEEPERBOMB = new MinesweeperBomb();
 
 	public static BlockEntityType<CounterBlockEntity> COUNTERBLOCKENTITY;
+	public static BlockEntityType<RobotBlockEntity> ROBOTBLOCKENTITY;
 
-
+	public static SerialPort port;
+	public static BlockPos serialBlock;
 
 	@Override
 	public void onInitialize() {
@@ -82,11 +86,17 @@ public class Openday implements ModInitializer {
 				BlockEntityType.Builder.create(CounterBlockEntity::new, COUNTER).build(null));
 
 
+		Registry.register(Registry.BLOCK, new Identifier("openday", "robot"), ROBOT);
+		Registry.register(Registry.ITEM, new Identifier("openday", "robot"),
+				new BlockItem(ROBOT, new Item.Settings().group(ItemGroup.REDSTONE)));
+
+		ROBOTBLOCKENTITY = Registry.register(Registry.BLOCK_ENTITY, new Identifier("openday", "robot"),
+				BlockEntityType.Builder.create(RobotBlockEntity::new, ROBOT).build(null));
+
 		SerialPort ports[] = SerialPort.getCommPorts();
-		System.out.println(Arrays.toString(ports));
-		SerialPort port = ports[1];
+		port = ports[1];
 		port.setComPortParameters(9600, 8, 1, 0);
-		port.setComPortTimeouts(SerialPort.TIMEOUT_NONBLOCKING,0,0);
+		port.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
 
 		if (port.openPort()) {
 			System.out.println("Port is open :)");
@@ -94,24 +104,6 @@ public class Openday implements ModInitializer {
 			System.out.println("Failed to open port :(");
 			return;
 		}
-		InputStream in = port.getInputStream();
-		port.addDataListener(new SerialPortDataListener() {
-			@Override
-			public int getListeningEvents() {
-				return SerialPort.LISTENING_EVENT_DATA_AVAILABLE;
-			}
-			public void serialEvent(SerialPortEvent event) {
-				if (event.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE)
-					return;
-				char numRead = 0;
-				try {
-					numRead = (char) in.read();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-				CounterBlockEntity.number = Character.getNumericValue(numRead);
-			}
-		});
 	}
 
 }

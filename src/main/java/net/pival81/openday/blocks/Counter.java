@@ -2,6 +2,7 @@ package net.pival81.openday.blocks;
 
 import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.world.IWorld;
 import net.pival81.openday.Openday;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -52,6 +53,15 @@ public class Counter extends Block implements BlockEntityProvider {
         } else {
             world.setBlockState(pos, Openday.COUNTER.getDefaultState().with(NUMBER, (state.get(NUMBER) > 0) ? state.get(NUMBER) - 1 : 9));
         }
-            return ActionResult.SUCCESS;
+        return ActionResult.SUCCESS;
     }
+
+    @Override
+    public void onBroken(IWorld world, BlockPos pos, BlockState state){
+        if(!world.isClient()) {
+            Openday.serialBlock = null;
+        }
+    }
+
+
 }

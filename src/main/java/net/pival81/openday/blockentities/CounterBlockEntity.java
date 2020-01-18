@@ -1,5 +1,8 @@
 package net.pival81.openday.blockentities;
 
+import com.fazecast.jSerialComm.SerialPort;
+import com.fazecast.jSerialComm.SerialPortDataListener;
+import com.fazecast.jSerialComm.SerialPortEvent;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.nbt.CompoundTag;
@@ -8,12 +11,17 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.pival81.openday.Openday;
 import net.pival81.openday.blocks.Counter;
+import net.pival81.openday.serialhandlers.CounterSerialHandler;
+import net.pival81.openday.serialhandlers.SerialHandler;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 public class CounterBlockEntity extends BlockEntity implements Tickable {
 
     //private int tickCount = 0;
 
-    public static int number = 0;
+    public boolean firstRun = true;
 
     public CounterBlockEntity() {
         super(Openday.COUNTERBLOCKENTITY);
@@ -35,9 +43,21 @@ public class CounterBlockEntity extends BlockEntity implements Tickable {
             BlockPos pos = this.getPos();
             BlockState bs = world.getBlockState(pos);
 
-            world.setBlockState(pos, bs.with(Counter.NUMBER, number), 2);
+            if (firstRun){
+                firstRun = false;
+                if(Openday.serialBlock == null){
+                    Openday.serialBlock = new BlockPos(pos.getX(), pos.getY(), pos.getZ());
+                }
+                if(Openday.serialBlock.getX() == pos.getX() &&
+                        Openday.serialBlock.getY() == pos.getY() &&
+                        Openday.serialBlock.getZ() == pos.getZ()) {
+                    Openday.serialBlock = new BlockPos(pos.getX(), pos.getY(), pos.getZ());
+                    Openday.port.addDataListener(new CounterSerialHandler(this.pos, this.world));
+                }
+            }
         }
     }
+
 
     /*@Override
     public void tick() {
