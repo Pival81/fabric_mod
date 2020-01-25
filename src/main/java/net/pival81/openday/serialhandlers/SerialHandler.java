@@ -4,7 +4,6 @@ import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -43,40 +42,50 @@ public class SerialHandler implements SerialPortDataListener {
         }
         System.out.println(numRead);
         int number = Character.getNumericValue(numRead);
-        BlockEntity be = world.getBlockEntity(pos);
-        BlockState bs = world.getBlockState(pos);
-        if(number == 0){
-            ((RobotBlockEntity) be).breakBlock();
-        } else if (number == 1){ //sx
-            switch(bs.get(Properties.FACING)){
-                case NORTH:
-                    world.setBlockState(pos, bs.with(Properties.FACING, WEST));
-                    break;
-                case SOUTH:
-                    world.setBlockState(pos, bs.with(Properties.FACING, EAST));
-                    break;
-                case WEST:
-                    world.setBlockState(pos, bs.with(Properties.FACING, SOUTH));
-                    break;
-                case EAST:
-                    world.setBlockState(pos, bs.with(Properties.FACING, NORTH));
-                    break;
+        try {
+            if (number == 0) {
+                RobotBlockEntity.queue.add(RobotBlockEntity.Actions.BREAK);
+            } else if (number == 1) { //sx
+                switch (world.getBlockState(pos).get(Properties.FACING)) {
+                    case NORTH:
+                        world.setBlockState(pos, world.getBlockState(pos).with(Properties.FACING, WEST));
+                        break;
+                    case SOUTH:
+                        world.setBlockState(pos, world.getBlockState(pos).with(Properties.FACING, EAST));
+                        break;
+                    case WEST:
+                        world.setBlockState(pos, world.getBlockState(pos).with(Properties.FACING, SOUTH));
+                        break;
+                    case EAST:
+                        world.setBlockState(pos, world.getBlockState(pos).with(Properties.FACING, NORTH));
+                        break;
+                }
+            } else if (number == 2) { //dx
+                switch (world.getBlockState(pos).get(Properties.FACING)) {
+                    case NORTH:
+                        world.setBlockState(pos, world.getBlockState(pos).with(Properties.FACING, EAST));
+                        break;
+                    case SOUTH:
+                        world.setBlockState(pos, world.getBlockState(pos).with(Properties.FACING, WEST));
+                        break;
+                    case WEST:
+                        world.setBlockState(pos, world.getBlockState(pos).with(Properties.FACING, NORTH));
+                        break;
+                    case EAST:
+                        world.setBlockState(pos, world.getBlockState(pos).with(Properties.FACING, SOUTH));
+                        break;
+                }
+            } else if (number == 3) {
+                RobotBlockEntity.queue.add(RobotBlockEntity.Actions.FORWARD);
+            } else if(number == 4){
+                RobotBlockEntity.queue.add(RobotBlockEntity.Actions.BACK);
+            }else if(number == 5){
+                RobotBlockEntity.queue.add(RobotBlockEntity.Actions.UP);
+            }else if(number == 6){
+                RobotBlockEntity.queue.add(RobotBlockEntity.Actions.DOWN);
             }
-        } else if (number == 2){ //dx
-            switch(bs.get(Properties.FACING)){
-                case NORTH:
-                    world.setBlockState(pos, bs.with(Properties.FACING, EAST));
-                    break;
-                case SOUTH:
-                    world.setBlockState(pos, bs.with(Properties.FACING, WEST));
-                    break;
-                case WEST:
-                    world.setBlockState(pos, bs.with(Properties.FACING, NORTH));
-                    break;
-                case EAST:
-                    world.setBlockState(pos, bs.with(Properties.FACING, SOUTH));
-                    break;
-            }
+        } catch (Exception e){
+            e.printStackTrace();
         }
     }
 }

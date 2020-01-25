@@ -1,10 +1,10 @@
 package net.pival81.openday;
 
 import com.fazecast.jSerialComm.SerialPort;
-import com.fazecast.jSerialComm.SerialPortDataListener;
-import com.fazecast.jSerialComm.SerialPortEvent;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.item.*;
+import net.minecraft.util.TypedActionResult;
 import net.pival81.openday.blockentities.CounterBlockEntity;
 import net.pival81.openday.blockentities.RobotBlockEntity;
 import net.pival81.openday.blocks.*;
@@ -12,10 +12,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
@@ -23,11 +19,6 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Arrays;
-
 
 public class Openday implements ModInitializer {
 
@@ -40,6 +31,13 @@ public class Openday implements ModInitializer {
 		public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult blockHitResult) {
 			player.getHungerManager().setFoodLevel(5);
 			return ActionResult.SUCCESS;
+		}
+	};
+	public static final Item DEBUGSERIALSTICK = new Item(new Item.Settings().group(ItemGroup.REDSTONE)){
+		@Override
+		public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+			System.out.println(Openday.port.isOpen());
+			return TypedActionResult.success(user.getStackInHand(hand));
 		}
 	};
 	//public static final Item COSAINSEGNA = new Item(new Item.Settings().group(ItemGroup.MISC));
@@ -69,6 +67,7 @@ public class Openday implements ModInitializer {
 				new BlockItem(HUNGERBLOCK, new Item.Settings().group(ItemGroup.FOOD)));
 
 		//Registry.register(Registry.ITEM, new Identifier("openday", "cosainsegna"), COSAINSEGNA);
+		Registry.register(Registry.ITEM, new Identifier("openday", "debugserial"), DEBUGSERIALSTICK);
 
 		Registry.register(Registry.BLOCK, new Identifier("openday", "minesweeper_controller"), MINESWEEPERCONTROLLER);
 		Registry.register(Registry.ITEM, new Identifier("openday", "minesweeper_controller"),
