@@ -41,13 +41,6 @@ public class Robot extends Block implements BlockEntityProvider {
     }
 
     @Override
-    public void neighborUpdate(BlockState state, World world, BlockPos pos, Block block, BlockPos neighborPos, boolean moved) {
-        if(world.isReceivingRedstonePower(pos)) {
-            ((RobotBlockEntity) world.getBlockEntity(pos)).breakBlock();
-        }
-    }
-
-    @Override
     public void onBroken(IWorld world, BlockPos pos, BlockState state){
         Openday.serialBlock = null;
     }

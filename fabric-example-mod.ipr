@@ -14,6 +14,8 @@
     <bytecodeTargetLevel target="1.8">
       <module name="fabric-example-mod.main" target="1.8" />
       <module name="fabric-example-mod.test" target="1.8" />
+      <module name="fabric_mod.main" target="1.8" />
+      <module name="fabric_mod.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="CopyrightManager" default="" />
@@ -176,9 +178,9 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/fabric-example-mod.iml" filepath="$PROJECT_DIR$/fabric-example-mod.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fabric-example-mod.main.iml" filepath="$PROJECT_DIR$/fabric-example-mod.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fabric-example-mod.test.iml" filepath="$PROJECT_DIR$/fabric-example-mod.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fabric_mod.iml" filepath="$PROJECT_DIR$/fabric_mod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fabric_mod.main.iml" filepath="$PROJECT_DIR$/fabric_mod.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fabric_mod.test.iml" filepath="$PROJECT_DIR$/fabric_mod.test.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
@@ -218,6 +220,9 @@
   </component>
   <component name="SvnBranchConfigurationManager">
     <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
   <component name="libraryTable">
     <library name="Gradle: com.fazecast:jSerialComm:2.5.3">

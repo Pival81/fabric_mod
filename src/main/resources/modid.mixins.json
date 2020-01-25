@@ -1,12 +1,10 @@
 {
-  "required": true,
+  "required": false,
   "package": "net.pival81.openday.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],
-  "client": [
-    "ExampleMixin"
-  ],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
   }
