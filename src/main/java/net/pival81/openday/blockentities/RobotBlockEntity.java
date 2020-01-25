@@ -19,13 +19,16 @@ public class RobotBlockEntity extends BlockEntity implements Tickable {
     public boolean firstRun = true;
 
     public static ArrayDeque<Actions> queue = new ArrayDeque<Actions>();
+    public Direction dir;
 
     public enum Actions {
         BREAK,
         FORWARD,
         BACK,
         UP,
-        DOWN
+        DOWN,
+        PRE,
+        POST
     }
 
     public RobotBlockEntity() {
@@ -73,34 +76,24 @@ public class RobotBlockEntity extends BlockEntity implements Tickable {
                 Actions currentAction = queue.poll();
                 if (currentAction == Actions.BREAK){
                     breakBlock();
-                } else if (currentAction == Actions.FORWARD){
-                    Direction dir = this.getCachedState().get(Properties.FACING);
+                } else if(currentAction == Actions.PRE){
+                    dir = this.getCachedState().get(Properties.FACING);
                     Openday.serialBlock = null;
                     Openday.port.removeDataListener();
+                } else if(currentAction == Actions.POST){
+                    world.setBlockState(this.getPos(), Blocks.AIR.getDefaultState(), 2);
+                } else if (currentAction == Actions.FORWARD){
                     world.setBlockState(this.getPos().offset(dir),
                             Openday.ROBOT.getDefaultState().with(Properties.FACING, dir), 2);
-                    world.setBlockState(this.getPos(), Blocks.AIR.getDefaultState(), 2);
                 } else if (currentAction == Actions.BACK){
-                    Direction dir = this.getCachedState().get(Properties.FACING);
-                    Openday.serialBlock = null;
-                    Openday.port.removeDataListener();
                     world.setBlockState(this.getPos().offset(dir.getOpposite()),
                             Openday.ROBOT.getDefaultState().with(Properties.FACING, dir), 2);
-                    world.setBlockState(this.getPos(), Blocks.AIR.getDefaultState(), 2);
                 } else if( currentAction == Actions.UP){
-                    Direction dir = this.getCachedState().get(Properties.FACING);
-                    Openday.serialBlock = null;
-                    Openday.port.removeDataListener();
                     world.setBlockState(this.getPos().up(),
                             Openday.ROBOT.getDefaultState().with(Properties.FACING, dir), 2);
-                    world.setBlockState(this.getPos(), Blocks.AIR.getDefaultState(), 2);
                 } else if( currentAction == Actions.DOWN){
-                    Direction dir = this.getCachedState().get(Properties.FACING);
-                    Openday.serialBlock = null;
-                    Openday.port.removeDataListener();
                     world.setBlockState(this.getPos().down(),
                             Openday.ROBOT.getDefaultState().with(Properties.FACING, dir), 2);
-                    world.setBlockState(this.getPos(), Blocks.AIR.getDefaultState(), 2);
                 }
             }
         }

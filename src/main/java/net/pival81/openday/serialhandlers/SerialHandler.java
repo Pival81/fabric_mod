@@ -76,13 +76,21 @@ public class SerialHandler implements SerialPortDataListener {
                         break;
                 }
             } else if (number == 3) {
+                RobotBlockEntity.queue.add(RobotBlockEntity.Actions.PRE);
                 RobotBlockEntity.queue.add(RobotBlockEntity.Actions.FORWARD);
+                RobotBlockEntity.queue.add(RobotBlockEntity.Actions.POST);
             } else if(number == 4){
+                RobotBlockEntity.queue.add(RobotBlockEntity.Actions.PRE);
                 RobotBlockEntity.queue.add(RobotBlockEntity.Actions.BACK);
+                RobotBlockEntity.queue.add(RobotBlockEntity.Actions.POST);
             }else if(number == 5){
+                RobotBlockEntity.queue.add(RobotBlockEntity.Actions.PRE);
                 RobotBlockEntity.queue.add(RobotBlockEntity.Actions.UP);
+                RobotBlockEntity.queue.add(RobotBlockEntity.Actions.POST);
             }else if(number == 6){
+                RobotBlockEntity.queue.add(RobotBlockEntity.Actions.PRE);
                 RobotBlockEntity.queue.add(RobotBlockEntity.Actions.DOWN);
+                RobotBlockEntity.queue.add(RobotBlockEntity.Actions.POST);
             }
         } catch (Exception e){
             e.printStackTrace();
