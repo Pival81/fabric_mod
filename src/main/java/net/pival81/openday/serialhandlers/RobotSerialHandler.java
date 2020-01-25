@@ -15,12 +15,12 @@ import java.io.InputStream;
 
 import static net.minecraft.util.math.Direction.*;
 
-public class SerialHandler implements SerialPortDataListener {
+public class RobotSerialHandler implements SerialPortDataListener {
 
     private BlockPos pos;
     private World world;
 
-    public SerialHandler(BlockPos pos, World world){
+    public RobotSerialHandler(BlockPos pos, World world){
         super();
         this.pos = pos;
         this.world = world;

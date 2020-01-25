@@ -1,8 +1,5 @@
 package net.pival81.openday.blockentities;
 
-import com.fazecast.jSerialComm.SerialPort;
-import com.fazecast.jSerialComm.SerialPortDataListener;
-import com.fazecast.jSerialComm.SerialPortEvent;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.nbt.CompoundTag;
@@ -10,12 +7,7 @@ import net.minecraft.util.Tickable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.pival81.openday.Openday;
-import net.pival81.openday.blocks.Counter;
 import net.pival81.openday.serialhandlers.CounterSerialHandler;
-import net.pival81.openday.serialhandlers.SerialHandler;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 public class CounterBlockEntity extends BlockEntity implements Tickable {
 

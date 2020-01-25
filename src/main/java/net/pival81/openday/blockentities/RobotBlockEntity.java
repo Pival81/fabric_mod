@@ -10,7 +10,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.pival81.openday.Openday;
-import net.pival81.openday.serialhandlers.SerialHandler;
+import net.pival81.openday.serialhandlers.RobotSerialHandler;
 
 import java.util.ArrayDeque;
 
@@ -68,7 +68,7 @@ public class RobotBlockEntity extends BlockEntity implements Tickable {
                    Openday.serialBlock.getY() == pos.getY() &&
                    Openday.serialBlock.getZ() == pos.getZ()) {
                         Openday.serialBlock = new BlockPos(pos.getX(), pos.getY(), pos.getZ());
-                        Openday.port.addDataListener(new SerialHandler(this.pos, this.world));
+                        Openday.port.addDataListener(new RobotSerialHandler(this.pos, this.world));
                 }
             }
 
